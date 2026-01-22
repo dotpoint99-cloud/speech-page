@@ -330,51 +330,38 @@ Let us reaffirm our collective commitment to ensure that every debate, every dec
 
 </div>
 <script>
-let speech;
-let voicesLoaded = false;
+let speech = null;
 
-// Force-load voices (important for GitHub Pages)
-function loadVoices(){
-  return new Promise(resolve => {
-    let voices = speechSynthesis.getVoices();
-    if (voices.length) {
-      voicesLoaded = true;
-      resolve(voices);
-    } else {
-      speechSynthesis.onvoiceschanged = () => {
-        voicesLoaded = true;
-        resolve(speechSynthesis.getVoices());
-      };
-    }
-  });
-}
+/* ===== PLAY AUDIO (MOBILE + DESKTOP SAFE) ===== */
+function playSpeech(){
+  // Required for mobile browsers
+  window.speechSynthesis.cancel();
 
-async function playSpeech(){
-  stopSpeech();
-
-  await loadVoices(); // 🔴 REQUIRED FIX
-
-  let text = document.querySelector(".speech-content").innerText;
-  if(!text.trim()){
-    alert("No text found to read.");
+  const text = document.querySelector(".speech-content").innerText.trim();
+  if(!text){
+    alert("No text to read");
     return;
   }
 
   speech = new SpeechSynthesisUtterance(text);
+
+  // Mobile-safe settings
   speech.lang = "en-IN";
   speech.rate = 0.95;
   speech.pitch = 1;
 
+  // MUST be inside user click
   window.speechSynthesis.speak(speech);
 }
 
+/* ===== STOP AUDIO ===== */
 function stopSpeech(){
   window.speechSynthesis.cancel();
 }
 
-/* ===== SOCIAL SHARE (HTTPS SAFE) ===== */
+/* ===== SOCIAL SHARE (HTTPS REQUIRED) ===== */
 function shareWhatsApp(){
-  window.location.href =
+  location.href =
     "https://wa.me/?text=" + encodeURIComponent(location.href);
 }
 
@@ -396,12 +383,14 @@ function shareX(){
 
 function copyLink(){
   navigator.clipboard.writeText(location.href)
-    .then(() => alert("Link copied successfully"))
-    .catch(() => alert("Copy failed"));
+    .then(()=>alert("Link copied"))
+    .catch(()=>alert("Copy failed"));
 }
 </script>
 
 
+
 </body>
 </html>
+
 
