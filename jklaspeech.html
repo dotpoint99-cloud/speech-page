@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official Speech | Hon’ble Speaker J&K</title>
+
+<style>
+/* ===== GLOBAL ===== */
+body{
+  margin:0;
+  font-family:"Segoe UI", Roboto, Arial, sans-serif;
+  background:#eef2f7;
+}
+
+.wrapper{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.card{
+  background:#ffffff;
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+  overflow:hidden;
+}
+
+/* ===== HEADER ===== */
+.header{
+  background:linear-gradient(135deg,#0b2341,#163a6b);
+  color:#ffffff;
+  padding:30px 20px 70px;
+  text-align:center;
+}
+
+.header h1{
+  margin:0;
+  font-size:26px;
+  font-weight:700;
+}
+
+.header p{
+  margin-top:8px;
+  font-size:14px;
+  opacity:.9;
+}
+
+/* ===== PHOTO ===== */
+.photo-box{
+  text-align:center;
+  margin-top:-60px;
+}
+
+.photo-box img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:top;
+  border:6px solid #ffffff;
+  background:#ddd;
+}
+
+/* ===== NAME ===== */
+.speaker-name{
+  text-align:center;
+  margin-top:12px;
+}
+
+.speaker-name h3{
+  margin:0;
+  font-size:20px;
+  font-weight:700;
+  color:#0b2341;
+}
+
+.speaker-name p{
+  margin-top:6px;
+  font-size:14.5px;
+  font-weight:500;
+  color:#444;
+  line-height:1.4;
+}
+
+/* ===== CONTROLS ===== */
+.controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  margin:25px 0;
+}
+
+button, a.btn{
+  border:none;
+  padding:12px 18px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  text-decoration:none;
+}
+
+.play{background:#2e7d32;color:#fff;}
+.stop{background:#c62828;color:#fff;}
+.pdf{background:#1a237e;color:#fff;}
+
+/* ===== SPEECH SCROLL AREA (ONLY THIS SCROLLS) ===== */
+.speech-container{
+  height:60vh;              /* CHANGE HEIGHT IF NEEDED */
+  overflow-y:auto;
+  padding:20px;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  background:#ffffff;
+}
+
+.speech-content{
+  max-width:760px;
+  margin:0 auto;
+}
+
+.speech-content h2{
+  text-align:center;
+  font-size:22px;
+  font-weight:700;
+  color:#0b2341;
+  margin-bottom:20px;
+}
+
+.speech-content p{
+  font-size:15.5px;
+  line-height:1.7;
+  color:#333;
+  margin-bottom:14px;
+  text-align:justify;
+}
+
+/* ===== SHARE ICONS ===== */
+.share-icons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:20px;
+}
+
+.share-icons button{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:18px;
+}
+
+.whatsapp{background:#25D366;}
+.facebook{background:#1877F2;}
+.x{background:#000000;}
+.copy{background:#6c757d;}
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;
+  font-size:13px;
+  color:#555;
+  margin:20px 0 10px;
+}
+
+.dev-credit{
+  margin-top:10px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.dev-credit strong{
+  color:#0b2341;
+}
+
+@media(max-width:600px){
+  .header h1{font-size:20px;}
+  .speech-container{height:55vh;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="card">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Speech Delivered by Hon’ble Speaker<br>Jammu &amp; Kashmir Legislative Assembly</h1>
+    <p>All India Presiding Officers’ Conference • Lucknow • January 2026</p>
+  </div>
+
+  <!-- PHOTO -->
+  <div class="photo-box">
+    <img src="speaker.jpg" alt="Hon’ble Speaker">
+  </div>
+
+  <!-- NAME -->
+  <div class="speaker-name">
+    <h3>Jenab Abdul Rahim Rather</h3>
+    <p>Hon’ble Speaker<br>Jammu &amp; Kashmir Legislative Assembly</p>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <button class="play" onclick="playSpeech()">▶ Play Audio</button>
+    <button class="stop" onclick="stopSpeech()">⏸ Stop</button>
+    <a class="btn pdf" href="speech.pdf" download>⬇ Download PDF</a>
+  </div>
+
+  <!-- SPEECH (ONLY THIS SCROLLS) -->
+  <div class="speech-container">
+    <div class="speech-content">
+
+      <h2>Accountability of the Legislature towards the People</h2>
+
+      <!-- PASTE / EDIT SPEECH PARAGRAPHS BELOW -->
+      <p>
+Hon’ble Speaker Lok Sabha, Deputy Chairman Rajya Sabha, Speaker Uttar Pradesh Legislative Assembly, Esteemed Presiding Officers from State Legislatures, Distinguished Guests, Ladies and Gentlemen.
+</p>
+
+<p>
+I feel deeply honoured to address this august gathering on a subject that lies at the very heart of our democratic ethos, <strong>“Accountability of the Legislature towards the People.”</strong>
+</p>
+
+<p>
+Accountability of the Legislature towards the people is not a modern idea; it has deep roots in ancient Indian democratic traditions, where <em>Dharma</em> guided governance and institutions like <em>Sabha</em> and <em>Samiti</em> ensured public participation and ruler accountability.
+</p>
+
+<p>
+Hindu scriptures regard rulers and lawmakers as servants of dharma, not masters of power. The <em>Manusmriti</em> states: “The king is created to protect the people and ensure justice; failing in this duty leads to his downfall.” This verse highlights that legislators are accountable for the welfare and protection of citizens.
+</p>
+
+<p>
+The <em>Mahabharata</em> strongly emphasizes ethical governance. In the <em>Shanti Parva</em>, Bhishma instructs Yudhishthira: “The ruler who acts for the happiness of his people attains righteousness, but one who neglects them destroys himself.” These teachings make it clear that accountability, justice, and public welfare are central to governance.
+</p>
+
+<p>
+In Islam, authority is not a privilege but a trust (<em>Amanah</em>). The Holy Qur’an commands: “Indeed, Allah commands you to render trusts to whom they are due and when you judge between people, judge with justice.” This verse reminds legislators that power must be exercised with fairness, honesty, and responsibility toward the people they serve.
+</p>
+
+<p>
+The Qur’an also emphasizes consultation and public participation: “And those who conduct their affairs by mutual consultation.” This establishes that lawmakers must listen to the people and act in their collective interest.
+</p>
+
+<p>
+In a democracy, the Legislature is not merely an institution of lawmaking; it is the collective voice, conscience, and custodian of the people’s will. The authority we exercise within our Houses does not originate from power, privilege, or position. It flows directly from the Constitution and ultimately from the citizens we represent. Therefore, our foremost accountability is to them.
+</p>
+
+<p>
+The Constitution envisions a Legislature that is transparent, responsive, and answerable. It entrusts Legislatures with immense responsibility to frame laws, oversee the Executive, approve public expenditure, and provide a forum for debate and dissent. Yet, beyond these constitutional functions lies a deeper moral obligation to uphold public trust.
+</p>
+
+<p>
+Citizens today are more aware, more informed, and more questioning than ever before. They do not judge Legislatures merely by the number of laws passed, but by the quality of debate, responsiveness to public concerns, and the integrity and conduct of their representatives. Accountability, therefore, is not episodic; it is continuous, visible, and measurable.
+</p>
+
+<p>
+One of the primary ways Legislatures demonstrate accountability is through thoughtful, inclusive, and well-scrutinized legislation. A House that debates with depth and dignity sends a powerful message that people’s issues are being taken seriously. Laws passed in haste, without adequate debate or stakeholder consultation, may erode public confidence.
+</p>
+
+<p>
+In recent years, public concern has grown over disruptions, disorder, and declining decorum in legislative chambers. While passionate disagreement is intrinsic to democracy, persistent disruption undermines public faith.
+</p>
+
+<p>
+As Presiding Officers, we are guardians of the dignity of the House. By enforcing rules impartially and upholding decorum firmly yet fairly, we affirm that democracy thrives on dialogue, not disorder. It is our duty to ensure adequate time for debate, encourage participation across party lines, and protect the rights of both the majority and the opposition.
+</p>
+
+<p>
+Another vital dimension of legislative accountability is effective oversight of the Executive. Questions, calling-attention motions, committee deliberations, and budgetary scrutiny are not procedural formalities; they are instruments through which the Legislature safeguards public interest.
+</p>
+
+<p>
+When oversight mechanisms function robustly, governance improves, transparency increases, and democracy deepens. Conversely, when they are weakened, accountability suffers, and it is ultimately the citizen who pays the price.
+</p>
+
+<p>
+In the digital age, accountability also demands greater transparency and direct engagement with citizens. Live telecasts, open committee systems, accessible legislative records, and the use of technology can bridge the gap between the Legislature and the people.
+</p>
+
+<p>
+Finally, accountability is inseparable from ethical conduct and personal integrity. Conflict of interest, misuse of privilege, or erosion of ethical standards damages not just individuals, but the institution as a whole. High standards of ethics reaffirm the Legislature as a moral authority, not merely a political arena.
+</p>
+
+<p>
+Hon’ble Presiding Officers, the strength of our democracy is measured not merely by electoral participation, but by how faithfully institutions respond to the people between elections. The Legislature must remain answerable, not insulated; accessible, not distant; and responsive, not merely reactive.
+</p>
+
+<p>
+Let us reaffirm our collective commitment to ensure that every debate, every decision, and every day of legislative functioning reflects an enduring truth: that the Legislature exists for the people and is accountable to them, whose faith is the foundation of this august institution.
+</p>
+
+<p><strong>Thank you.</strong></p>
+
+    </div>
+  </div>
+
+  <!-- SHARE -->
+  <div class="share-icons">
+    <button class="whatsapp" onclick="shareWhatsApp()">🟢</button>
+    <button class="facebook" onclick="shareFacebook()">🔵</button>
+    <button class="x" onclick="shareX()">✖</button>
+    <button class="copy" onclick="copyLink()">📋</button>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 | Official Conference Speech
+	<!--
+    <div class="dev-credit">
+     <!Design &amp; Development by <strong>Shri Vishal Sharma</strong><br>
+      Nodal Officer, NeVA &amp; IT Branch<br>
+      Jammu &amp; Kashmir Legislative Assembly<br>
+      📞 7889791273!>
+    </div>
+	!>
+  </div>
+
+</div>
+</div>
+
+<script>
+let speech;
+
+function playSpeech(){
+  stopSpeech();
+  speech = new SpeechSynthesisUtterance(
+    document.querySelector(".speech-content").innerText
+  );
+  speech.lang = "en-IN";
+  speech.rate = 0.95;
+  window.speechSynthesis.speak(speech);
+}
+
+function stopSpeech(){
+  window.speechSynthesis.cancel();
+}
+
+function shareWhatsApp(){
+  window.location.href =
+    "https://wa.me/?text=" + encodeURIComponent(location.href);
+}
+
+function shareFacebook(){
+  window.open(
+    "https://www.facebook.com/sharer/sharer.php?u=" +
+    encodeURIComponent(location.href)
+  );
+}
+
+function shareX(){
+  window.open(
+    "https://twitter.com/intent/tweet?url=" +
+    encodeURIComponent(location.href)
+  );
+}
+
+function copyLink(){
+  navigator.clipboard.writeText(location.href);
+  alert("Link copied successfully");
+}
+</script>
+
+</body>
+</html>
